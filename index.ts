@@ -7,6 +7,11 @@ window.onload =() =>{
       let template = document.querySelector('#wujie') as HTMLTemplateElement;
 
       dom.appendChild(template.content.cloneNode(true));
+
+      console.log(this.getAttr('url'),this.getAttr('age'))
+    }
+    private getAttr (attr:string){
+      return this.getAttribute(attr)
     }
   }
   window.customElements.define('wu-jie',Wujie);//挂载完成
